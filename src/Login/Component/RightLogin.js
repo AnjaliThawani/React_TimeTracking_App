@@ -4,10 +4,9 @@ import {
   FormControl,
   Input,
 } from '@chakra-ui/react'
-import React, { Component } from 'react'
+import React from 'react'
 import "@fontsource/poppins";
 import "@fontsource/montserrat"
-
 
 const RightLogin = () => {
   return (

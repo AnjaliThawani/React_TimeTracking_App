@@ -1,7 +1,7 @@
 import { Image, Flex } from '@chakra-ui/react'
 import React from 'react'
 import style from './leftLoginStyle.module.css'
-import { newLogo, mainImage } from '../Assets/index.ts'
+import { newLogo, mainImage } from '../../Assets/index.ts'
 import "@fontsource/poppins";
 import "@fontsource/montserrat"
 
