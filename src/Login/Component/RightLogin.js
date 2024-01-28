@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import {
   Button,
   Flex,
@@ -12,6 +12,13 @@ import "@fontsource/montserrat"
 import { loginTheme } from '../../config/theme/login-theme/login.theme.ts';
 
 const RightLogin = () => {
+  const emailInputRef = useRef(null);
+
+  useEffect(() => {
+    // Focus on the email input when the component mounts
+    emailInputRef.current.focus();
+  }, []);
+
   return (
     <ThemeProvider theme={loginTheme}>
       <Flex style={{
@@ -59,9 +66,10 @@ const RightLogin = () => {
           width: '500px',
           alignItems: 'Center',
           marginLeft: '55%',
-          fontFamily: 'montserrat'
+          fontFamily: 'montserrat',
+
         }} >
-          <Input mb="6" variant='flushed' placeholder='Email' />
+          <Input mb="6" variant='flushed' placeholder='Email' ref={emailInputRef} />
           <Input variant='flushed' placeholder='Password' />
         </FormControl>
 
@@ -79,7 +87,8 @@ const RightLogin = () => {
           color: '#909090',
           alignItems: 'Center',
           paddingTop: '1.5%',
-          marginLeft: '125%'
+          marginLeft: '125%',
+
         }}>Forgot password?</a>
 
         <Button
@@ -90,10 +99,10 @@ const RightLogin = () => {
           colorScheme='Facebook'
           size='lg'
           w='500px'
-        >        Login
+        >  Login
         </Button>
       </Flex >
-    </ThemeProvider>
+    </ThemeProvider >
   )
 }
 
