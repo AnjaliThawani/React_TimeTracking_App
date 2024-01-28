@@ -1,19 +1,17 @@
 import './App.css';
-import { ChakraProvider } from '@chakra-ui/react'
-import LeftLogin from './Login/Component/LeftLogin';
-import RightLogin from './Login/Component/RightLogin';
-import { HStack } from '@chakra-ui/react'
-import { loginTheme } from './config/theme/login-theme/login.theme.ts';
+import { ChakraProvider } from '@chakra-ui/react';
+import Index from './dashboard/Component/Index.js'
+import ContentWrapper from './hoc/Component/ContentWrapper.js';
+import DashboardHeader from './dashboard/Component/DashboardHeader.js';
 
 
 function App() {
 
   return (
     <ChakraProvider>
-      <HStack>
-        <LeftLogin />
-        <RightLogin />
-      </HStack>
+      <Index />
+
+
     </ChakraProvider>
   );
 }
